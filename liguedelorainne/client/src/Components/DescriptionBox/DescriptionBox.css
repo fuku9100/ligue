@@ -1,9 +1,14 @@
+/* Description box styles */
 .descriptionbox {
-  margin: 120px 170px;
+  margin: 120px 170px; /* adjust as needed */
 }
+
+/* Navigator styles */
 .descriptionbox-navigator {
   display: flex;
+  justify-content: space-between; /* distribute nav-boxes evenly */
 }
+
 .descriptionbox-nav-box {
   display: flex;
   align-items: center;
@@ -14,15 +19,19 @@
   height: 70px;
   border: 1px solid #d0d0d0;
 }
-.descriptionbox-nav-box.fade{
-    background: #FBFBFB;
-    color: #555;
+
+/* Add .active class to highlight the active nav-box */
+.descriptionbox-nav-box.active {
+  background: #FBFBFB;
+  color: #555;
 }
-.descriptionbox-description{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    border: 1px solid #D0D0D0;
-    padding: 48px;
-    padding-bottom: 70px;
+
+/* Description content styles */
+.descriptionbox-description {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border: 1px solid #D0D0D0;
+  padding: 48px;
+  padding-bottom: 70px;
 }
