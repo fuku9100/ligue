@@ -1,8 +1,11 @@
+/* Hero styling */
 .hero {
   height: 100vh;
   background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
   display: flex;
 }
+
+/* Left hero section */
 .hero-left {
   flex: 1;
   display: flex;
@@ -12,24 +15,32 @@
   padding-left: 180px;
   line-height: 1.1;
 }
+
+/* Hero left title and description */
 .hero-left h2 {
-  color: #090909;
+  color: var(--dark-text-color);
   font-size: 26px;
   font-weight: 600;
 }
+
 .hero-left p {
-  color: #171717;
+  color: var(--main-text-color);
   font-size: 100px;
   font-weight: 700;
 }
+
+/* Hero hand icon */
 .hero-hand-icon {
   display: flex;
   align-items: center;
   gap: 20px;
 }
+
 .hero-hand-icon img {
   width: 105px;
 }
+
+/* Hero latest button */
 .hero-latest-btn {
   display: flex;
   justify-content: center;
@@ -39,18 +50,17 @@
   height: 69px;
   border-radius: 75px;
   margin-top: 30px;
-  background: #ff4141;
+  background: var(--main-accent-color);
   color: #fff;
   font-size: 22px;
   font-weight: 500;
+  transition: padding 0.5s ease;
 }
-.hero-latest-btn:hover div{
-    padding: 10px;
-    transition: 1s;
-  }
-.hero-right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.hero-latest-btn:hover {
+  padding: 10px;
+  cursor: pointer;
 }
+
+/* Hero right section */
+.
