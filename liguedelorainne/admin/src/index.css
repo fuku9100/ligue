@@ -1,6 +1,41 @@
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #F6F6F6;
-  height: 100vh;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Improved Code</title>
+  <style>
+    /* Reset default styles */
+    body, h1, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Use a modern sans-serif font */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f6f6f6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Center text */
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    /* Add some space between paragraphs */
+    p {
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to my website!</h1>
+  <p>This is some sample text.</p>
+</body>
+</html>
