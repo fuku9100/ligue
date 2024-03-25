@@ -2,17 +2,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white; /* use background-color instead of background */
   padding-top: 50px;
-  background: white;
   padding-bottom: 50px;
 }
+
 .footer hr {
-  width: 1505px;
+  width: 100%; /* use 100% instead of a fixed width */
   height: 3px;
-  background: #989898;
+  background-color: #989898;
   border: none;
 }
-.footer p{
-    color: #1A1A1A;
-    font-size: 20px;
+
+.footer p {
+  color: #1A1A1A;
+  font-size: 20px;
+  text-align: center; /* center-align the text */
 }
