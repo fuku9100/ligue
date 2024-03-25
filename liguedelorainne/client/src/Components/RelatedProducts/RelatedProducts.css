@@ -1,24 +1,27 @@
-.relatedproducts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    height: 90vh;
-  }
-  .relatedproducts h1 {
-    color: #171717;
-    font-size: 50px;
-    font-weight: 600;
-    margin: 0;
-  }
-  .relatedproducts hr {
-    width: 200px;
-    height: 6px;
-    border-radius: 10px;
-    background: #252525;
-  }
-  .relatedproducts-item{
-      margin-top: 50px;
-      display: flex;
-      gap: 30px;
-  }
+.related-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  height: 80vh;
+  margin-top: 50px; /* moved the margin top to the container */
+}
+
+.related-products h1 {
+  color: #171717;
+  font-size: 40px; /* reduced font size for better readability */
+  font-weight: 600;
+  margin: 0;
+}
+
+.related-products hr {
+  width: 100%; /* makes the hr take up the full width of the container */
+  height: 6px;
+  border-radius: 10px;
+  background: #252525;
+}
+
+.related-products-item {
+  display: flex;
+  gap: 20px; /* reduced gap for better alignment */
+}
