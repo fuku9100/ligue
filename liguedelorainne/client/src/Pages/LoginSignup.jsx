@@ -2,85 +2,116 @@ import React, { useState } from "react";
 import "./CSS/LoginSignup.css";
 
 const LoginSignup = () => {
-
-  const [state,setState] = useState("Login");
-  const [formData,setFormData] = useState({username:"",email:"",password:""});
+  const [state, setState] = useState("Login");
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
 
   const changeHandler = (e) => {
-    setFormData({...formData,[e.target.name]:e.target.value});
+    setFormData({ ...formData, [e.target.name]: e.target.value.trim() });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (state === "Login") {
+      await login();
+    } else {
+      await signup();
     }
+  };
 
   const login = async () => {
-    let dataObj;
-    await fetch('http://localhost:4000/login', {
-      method: 'POST',
-      headers: {
-        Accept:'application/form-data',
-        'Content-Type':'application/json',
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((resp) => resp.json())
-      .then((data) => {dataObj=data});
-      console.log(dataObj);
-      if (dataObj.success) {
-        localStorage.setItem('auth-token',dataObj.token);
+    const { email, password } = formData;
+    try {
+      const response = await fetch("http://localhost:4000/login", {
+        method: "POST",
+        headers: {
+          Accept: "application/form-data",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+      const data = await response.json();
+      const { success, errors, token } = data;
+      if (success) {
+        localStorage.setItem("auth-token", token);
         window.location.replace("/");
+      } else {
+        alert(errors);
       }
-      else
-      {
-        alert(dataObj.errors)
-      }
-  }
+    } catch (error) {
+      console.error("Error in login:", error);
+    }
+  };
 
   const signup = async () => {
-    let dataObj;
-    await fetch('http://localhost:4000/signup', {
-      method: 'POST',
-      headers: {
-        Accept:'application/form-data',
-        'Content-Type':'application/json',
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((resp) => resp.json())
-      .then((data) => {dataObj=data});
-
-      if (dataObj.success) {
-        localStorage.setItem('auth-token',dataObj.token);
+    const { username, email, password } = formData;
+    try {
+      const response = await fetch("http://localhost:4000/signup", {
+        method: "POST",
+        headers: {
+          Accept: "application/form-data",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, email, password }),
+      });
+      const data = await response.json();
+      const { success, errors, token } = data;
+      if (success) {
+        localStorage.setItem("auth-token", token);
         window.location.replace("/");
+      } else {
+        alert(errors);
       }
-      else
-      {
-        alert(dataObj.errors)
-      }
-  }
+    } catch (error) {
+      console.error("Error in signup:", error);
+    }
+  };
 
   return (
     <div className="loginsignup">
       <div className="loginsignup-container">
         <h1>{state}</h1>
-        <div className="loginsignup-fields">
-          {state==="Sign Up"?<input type="text" placeholder="Your name" name="username" value={formData.username} onChange={changeHandler}/>:<></>}
-          <input type="email" placeholder="Email address" name="email" value={formData.email} onChange={changeHandler}/>
-          <input type="password" placeholder="Password" name="password" value={formData.password} onChange={changeHandler}/>
-        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="loginsignup-fields">
+            {state === "Sign Up" && (
+              <input
+                type="text"
+                placeholder="Your name"
+                name="username"
+                value={formData.username}
+                onChange={changeHandler}
+                required
+              />
+            )}
+            <input
+              type="email"
+              placeholder="Email address"
+              name="email"
+              value={formData.email}
+              onChange={changeHandler}
+              required
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              value={formData.password}
+              onChange={changeHandler}
+              required
+            />
+          </div>
+          <button type="submit">{state.toUpperCase()}</button>
+        </form>
 
-        {state==="Login"
-        ?<button onClick={()=>{login()}}>Continue</button>
-        :<button onClick={()=>{signup()}}>Continue</button>}
-
-        {state==="Login"?
-        <p className="loginsignup-login">Create an account? <span onClick={()=>{setState("Sign Up")}}>Click here</span></p>
-        :<p className="loginsignup-login">Already have an account? <span onClick={()=>{setState("Login")}}>Login here</span></p>}
-
-        <div className="loginsignup-agree">
-          <input type="checkbox" name="" id="" />
-          <p>By continuing, i agree to the terms of use & privacy policy.</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default LoginSignup;
+        {state === "Login" ? (
+          <p className="loginsignup-login">
+            Create an account? <span onClick={() => setState("Sign Up")}>Click here</span>
+          </p>
+        ) : (
+          <p className="loginsignup-login">
+            Already have an account? <span onClick={() => setState("Login")}>Login here</span>
+          </p>
+       
