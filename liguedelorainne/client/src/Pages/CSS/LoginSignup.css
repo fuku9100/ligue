@@ -1,26 +1,35 @@
-.loginsignup {
-  width: 100%;
-  height: 80vh;
-  background: #fce3fe;
-  padding-top: 100px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-.loginsignup-container {
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
   width: 580px;
   height: 600px;
   background: white;
   margin: auto;
   padding: 40px 60px;
 }
-.loginsignup-container h1 {
+
+.title {
   margin: 20px 0px;
 }
-.loginsignup-fields {
+
+.fields {
   display: flex;
   flex-direction: column;
   gap: 29px;
   margin-top: 30px;
 }
-.loginsignup-fields input {
+
+.fields input {
   height: 72px;
   width: 100%;
   padding-left: 20px;
@@ -29,8 +38,9 @@
   color: #5c5c5c;
   font-size: 18px;
 }
-.loginsignup-container button {
-  width: 580px;
+
+.button {
+  width: 100%;
   height: 72px;
   color: white;
   background: #ff4141;
@@ -40,22 +50,15 @@
   font-weight: 500;
   cursor: pointer;
 }
-.loginsignup-login {
+
+.login-link {
   margin-top: 20px;
   color: #5c5c5c;
   font-size: 18px;
   font-weight: 500;
+  text-align: center;
+  text-decoration: none;
 }
-.loginsignup-container span {
-  color: #ff4141;
-  font-weight: 600;
-}
-.loginsignup-agree {
-  display: flex;
-  align-items: center;
-  margin-top: 25px;
-  gap: 20px;
-  color: #5c5c5c;
-  font-size: 18px;
-  font-weight: 500;
-}
+
+.agree {
+  display: flex
