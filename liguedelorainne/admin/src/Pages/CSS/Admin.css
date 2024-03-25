@@ -1,4 +1,5 @@
-.admin{
-    display: flex;
-    gap: 30px;
+.admin {
+  display: flex;
+  justify-content: space-between; /* This will ensure that the flex items are evenly distributed along the line, with equal space between them. */
+  gap: 30px;
 }
