@@ -7,7 +7,7 @@ import p6_img from "./product_2.png";
 import p7_img from "./product_17.png";
 import p8_img from "./product_28.png";
 
-let new_collections = [
+const newCollections = [
   {
     id: 12,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
@@ -52,18 +52,4 @@ let new_collections = [
   },
   {
     id: 17,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
-    image: p7_img,
-    new_price: 60.0,
-    old_price: 100.5,
-  },
-  {
-    id: 28,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    image: p8_img,
-    new_price: 100.0,
-    old_price: 150.0,
-  },
-];
-
-export default new_collections;
+    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket
