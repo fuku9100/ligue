@@ -1,9 +1,31 @@
-.navbar{
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$shadow-color: black;
+
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 60px;
-    box-shadow: 0 1px 3px -2px black;
+    box-shadow: 0 1px 3px -2px $shadow-color;
     margin-bottom: 1px;
-    background: white;
+    background-color: white;
+
+    &-brand {
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &-link {
+        color: $secondary-color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
