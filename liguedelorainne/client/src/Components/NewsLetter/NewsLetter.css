@@ -1,52 +1,52 @@
+<div class="newsletter">
+  <h1>Subscribe to our newsletter</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget ligula
+    vitae nisi tincidunt dapibus.
+  </p>
+  <form>
+    <div class="input-area">
+      <input type="email" id="email" placeholder="Enter your email" />
+      <button type="submit">Subscribe</button>
+    </div>
+  </form>
+</div>
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .newsletter {
-  width: 65%;
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  padding: 0px 140px;
-  margin-bottom: 150px;
   background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
-  gap: 30px;
+  padding: 50px 30px;
 }
+
 .newsletter h1 {
   color: #454545;
-  font-size: 55px;
+  font-size: 3rem;
   font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
 .newsletter p {
   color: #454545;
-  font-size: 20px;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.newsletter div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: white;
-  width: 731px;
-  height: 69px;
-  border-radius: 80px;
-  border: 1px solid #e3e3e3;
-}
-.newsletter input {
-  width: 500px;
-  margin-left: 30px;
-  border: none;
-  outline: none;
-  color: #616161;
-  font-family: Poppins;
-  font-size: 16px;
-}
-
-.newsletter div button {
-  width: 212px;
-  height: 69px;
-  border-radius: 80px;
-  background: #000;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
+.newsletter form {
+  display: grid;
+  grid-template-columns: 1fr 1fr
