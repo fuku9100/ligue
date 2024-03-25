@@ -6,10 +6,11 @@ const NewCollections = (props) => {
   return (
     <div className='new-collections'>
       <h1>NEW COLLECTIONS</h1>
-      <hr />
+      <hr key="line" />
       <div className="collections">
         {props.data.map((item,i)=>{
-                return <Item id={item.id} key={i} name={item.name} image={item.image}  new_price={item.new_price} old_price={item.old_price}/>
+                const { id, name, image, new_price = 0, old_price = 0 } = item;
+                return <Item id={id} key={i} name={name} image={image || "default-image.jpg"} new_price={new_price} old_price={old_price} />
             })}
       </div>
     </div>
@@ -17,3 +18,4 @@ const NewCollections = (props) => {
 }
 
 export default NewCollections
+
