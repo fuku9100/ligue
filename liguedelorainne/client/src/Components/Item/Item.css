@@ -1,29 +1,43 @@
+/* General styles for item container */
 .item {
   width: 350px;
+  transition: transform 0.6s;
 }
-.item img{
-  width: 350px;
+
+/* Styles for item image */
+.item img {
+  width: 100%;
   height: 418px;
 }
-.item p{
-  margin: 6px 0px;
+
+/* Styles for item text */
+.item p {
+  margin: 6px 0;
 }
+
+/* Styles for item prices container */
 .item-prices {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
+
+/* Styles for new item price */
 .item-price-new {
-  color: #374151;
   font-size: 18px;
   font-weight: 600;
+  color: #374151;
 }
+
+/* Styles for old item price */
 .item-price-old {
-    color: #8C8C8C;
-    font-size: 18px;
-    font-weight: 500;
-    text-decoration: line-through;
-  }
-.item:hover{
+  font-size: 18px;
+  font-weight: 500;
+  color: #8C8C8C;
+  text-decoration: line-through;
+}
+
+/* Hover styles for item container */
+.item:hover {
   transform: scale(1.05);
-  transition: 0.6s;
 }
