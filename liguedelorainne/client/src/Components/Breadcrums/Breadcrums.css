@@ -1,10 +1,18 @@
-.breadcrums {
+.breadcrumbs {
   display: flex;
   align-items: center;
   gap: 8px;
   color: #5e5e5e;
   font-size: 16px;
   font-weight: 600;
-  margin: 60px 170px;
   text-transform: capitalize;
+}
+
+/* Add margin using a CSS custom property to make it easier to modify in the future */
+.breadcrumbs {
+  --margin-top: 60px;
+  --margin-right: 170px;
+  --margin-bottom: 60px;
+  --margin-left: 170px;
+  margin: calc(var(--margin-top) + var(--margin-bottom)) calc(var(--margin-right) + var(--margin-left));
 }
