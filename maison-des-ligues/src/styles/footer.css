@@ -1,0 +1,17 @@
+Footer{
+    background-color: #000000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.sitefooter{
+    color: rgb(255, 255, 255);
+    padding: 32px;
+    padding-bottom: 5px;
+    padding-top: 30px;
+}
+
+li{
+    list-style: none;
+}

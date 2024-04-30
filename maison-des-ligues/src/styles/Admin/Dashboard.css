@@ -1,0 +1,54 @@
+.tbd .box-container{
+    display: inline;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 7.5rem;
+    justify-content: center;
+    align-items: flex-start;
+ }
+
+.tbd .box-container .box{
+    padding:0.5rem;
+    text-align: center;
+    border: .2rem solid;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    background-color: white;
+ }
+ 
+ .tbd .box-container .box h3{
+    font-size: 2.7rem;
+    color: black;
+ }
+ 
+ .tbd .box-container .box h3 span{
+    font-size: 2rem;
+ }
+ 
+ .tbd .box-container .box p{
+    padding:1.3rem;
+    border-radius: .5rem;
+    background-color: white;
+    font-size: 1.7rem;
+    color: grey;
+    margin:1rem 0;
+ }
+
+ .btn{
+   background-color: red;
+   display: block;
+   width: 100%;
+   margin-top: 1rem;
+   border-radius: .5rem;
+   padding:1rem 3rem;
+   font-size: 1.7rem;
+   color:white;
+   cursor: pointer;
+   text-align: center;
+ }
+
+ .btn:hover{
+    background-color: black;
+    color: white;
+ }
+
+ 

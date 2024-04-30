@@ -1,0 +1,40 @@
+form {
+    max-width: 350px;
+    margin: 20px auto;
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  form button {
+    background-color: red;
+    color: #fff;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  form button:hover {
+    background-color: #c9302c;
+  }
+  

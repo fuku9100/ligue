@@ -1,0 +1,29 @@
+/* Modif_Admin.css */
+
+.modify-admins {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.admin-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.admin-box h2 {
+    margin-bottom: 5px;
+}
+
+.admin-box button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.admin-box button:hover {
+    background-color: #45a049;
+}
