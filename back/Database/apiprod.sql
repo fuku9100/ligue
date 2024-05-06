@@ -108,7 +108,7 @@ INSERT INTO `users` (`uid`, `name`, `email`, `password`, `admin`) VALUES
 ALTER TABLE `panier`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_panier_uid` (`uid`),
-  ADD KEY `fk_panier_pid` (`pid`);
+  ADD KEY `fk_panier_pid` (`pid`),
 
 --
 -- Index pour la table `products`
