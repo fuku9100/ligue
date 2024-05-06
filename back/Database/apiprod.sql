@@ -141,7 +141,7 @@ ALTER TABLE `panier`
 --
 ALTER TABLE `panier`
   ADD CONSTRAINT `fk_panier_pid` FOREIGN KEY (`pid`) REFERENCES `products` (`pid`),
-  ADD CONSTRAINT `fk_panier_uid` FOREIGN KEY (`uid`) REFERENCES `users` (`uid`);
+  ADD CONSTRAINT `fk_panier_uid` FOREIGN KEY (`uid`) REFERENCES `users` (`uid`),
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
