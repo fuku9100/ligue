@@ -11,7 +11,7 @@ import Profil from '../components/Profil';
 import Connexion from './connexion';
 import Inscription from '../components/inscription';
 import Dashboard from './Admin/Dashboard';
-
+import AndProduct from './Admin/Andproduct';
 import ModifyProduct from './Admin/ModifyProduct';
 import DeleteProduct from './Admin/DeleteProduct';
 
@@ -62,6 +62,8 @@ function App() {
                     
         <Route path='/Admin/ModifyProduct' element={<ModifyProduct />} />
         <Route path='/Admin/DeleteProduct' element={<DeleteProduct />} />
+        <Route path='/Admin/AndProduct' element={<AndProduct />} />
+
 
               
                     </>

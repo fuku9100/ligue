@@ -16,12 +16,12 @@ function Dashboard({ productCount }) {
                 <div className="dashboard-box">
                     <h3>{productCount}</h3>
                     <p>Produits disponibles</p>
-                    <Link to="/Admin/Produits" className="dashboard-button">Voir et ajouter des produits</Link>
+                    <Link to="/Admin/Produits" className="dashboard-button">Voir les produits</Link>
                 </div>
 
                 <div className="dashboard-box">
                     <h3>Actions</h3>
-                    <Link to="/Admin/CreateProduct" className="dashboard-button">Créer un produit</Link>
+                    <Link to="/Admin/AndProduct" className="dashboard-button">Créer un produit</Link>
                     <Link to="/Admin/ModifyProduct" className="dashboard-button">Modifier un produit</Link>
                     <Link to="/Admin/DeleteProduct" className="dashboard-button">Supprimer un produit</Link>
                 </div>
