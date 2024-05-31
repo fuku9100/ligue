@@ -8,15 +8,16 @@ const { authenticator } = require('../midleware/middleware');
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
-const router = express.Router();
+const defineRoutes = () => {
+    router.post('/connexion', userController.connexion);
+    router.post('/inscription', userController.inscription);
+    router.get('/utilisateurs', userController.utilisateurs);
+    router.get('/administrateurs', authenticator, isadmin, userController.administrateurs);
+    router.delete('/utilisateurs/:uid', userController.delete);
+    router.post('/deconnexion', userController.deconnexion);
+    router.post('/connexionadmin', userController.connexionAdmin);
+};
 
-router.post('/connexion', usercontroller.connexion);
-router.post('/inscription', usercontroller.inscription);
-router.get('/utilisateurs', usercontroller.utilisateurs);
-router.get('/administrateurs', authenticator, isadmin, usercontroller.administrateurs);
-router.post('/modifieradmin', authenticator, isadmin, usercontroller.modifieradmin);
-router.delete('/utilisateurs/:uid', usercontroller.delete);
-router.post('/deconnexion', usercontroller.deconnexion);
-router.post('/connexionadmin', usercontroller.connexionAdmin);
+defineRoutes();
 
 module.exports = router;

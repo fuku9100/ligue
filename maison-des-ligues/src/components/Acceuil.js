@@ -24,14 +24,10 @@ function Acceuil() {
     }, []);
 
     return (
-        <div>
+        
              <div className="banniere-image">
              <img src={croppedBanniere} alt="Logo Maison des Ligues de Lorraine" className="banniere-img" />
-                <h1 className="banniere-titre">Bienvenue, { userName || 'Vous etes pas connecté'}!</h1>
-            </div>
-            
-            {isAdmin && <p>Vous êtes administrateur.</p>}
-            {/* Autres éléments de votre page d'accueil */}
+              
         </div>
     );
 }

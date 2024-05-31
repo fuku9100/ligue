@@ -11,10 +11,12 @@ import Profil from '../components/Profil';
 import Connexion from './connexion';
 import Inscription from '../components/inscription';
 import Dashboard from './Admin/Dashboard';
-import Commandes from './Admin/Commandes';
-import Modif_Admin from './Admin/Modif_Admin';
+
+import ModifyProduct from './Admin/ModifyProduct';
+import DeleteProduct from './Admin/DeleteProduct';
+
 import Produits from './Admin/Produits';
-import Utilisateurs from './Admin/Utilisateurs';
+
 import Cookies from 'js-cookie';
 
 function App() {
@@ -56,10 +58,12 @@ function App() {
                 {isAdmin && (
                     <>
                         <Route path='/Admin/Dashboard' element={<Dashboard />} />
-                        <Route path='/Admin/Commandes' element={<Commandes />} />
-                        <Route path='/Admin/Modif_Admin' element={<Modif_Admin />} />
                         <Route path='/Admin/Produits' element={<Produits />} />
-                        <Route path='/Admin/Utilisateurs' element={<Utilisateurs />} />
+                    
+        <Route path='/Admin/ModifyProduct' element={<ModifyProduct />} />
+        <Route path='/Admin/DeleteProduct' element={<DeleteProduct />} />
+
+              
                     </>
                 )}
             </Routes>

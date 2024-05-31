@@ -8,6 +8,10 @@ ul {
     background-color: #ffffff;
 }
 
+.logo {
+    width: 120px;
+    margin-right: auto;
+}
 
 h2{
     color: red;
@@ -29,8 +33,8 @@ li a {
 
 .img_logo {
     width: 120px;
+    
 }
-
 .img_panier {
     width: 35px;
     margin-left: auto;
@@ -40,27 +44,41 @@ li a {
 
 .img_profil {
     width: 35px;
-    right: 0;
-    position: absolute;
+    margin-right: 20px; /* Adjust as needed */
 }
 
 .logogo {
-    position: absolute;
-    right: 5px;
-    top: 15px;
     display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the end of the container */
+    flex-grow: 1; /* Allow this container to take up remaining space */
+    margin-left: auto; /* Pushes the logo to the right */
 }
-
 nav {
+    display: flex;
+    align-items: center; /* This will vertically center the items */
+    justify-content: flex-start; /* This will align items to the start of the container */
     border: solid rgb(0, 0, 0);
 }
 
 .logo_panier {
     width: 38px;
-    margin-right: 80px;
+    margin-right: 20px; /* Adjust as needed */
     margin-top: -20px;
 }
 
 
 
+.banniere-ul {
+    list-style-type: none;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+}
 
+
+h1 {
+    font-size: 2em; /* Adjust the size as needed */
+    margin-right: auto; /* Pushes everything else to the right */
+}

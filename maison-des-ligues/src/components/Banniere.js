@@ -26,6 +26,7 @@ function Banniere() {
     return (
         <nav>
              <img src={logo} alt="Logo" className='logo' />
+             <h1>M2L</h1>
             <ul className='banniere-ul'>
                 
                 <li><Link to="/acceuil">Acceuil</Link></li>

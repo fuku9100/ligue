@@ -57,7 +57,7 @@ const MyComponent = () => {
         <div className="bouton-profil">
           {isAuthenticated ? (
             <>
-              <button><Link to="/Profil">Modifier</Link></button>
+              
               <button className="deco" onClick={handleLogout}>Déconnexion</button>
             </>
           ) : (
